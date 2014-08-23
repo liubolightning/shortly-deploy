@@ -53,6 +53,11 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
+      combine: {
+        files: {
+          'public/dist/style.min.css': ['public/style.css']
+        }
+      }
     },
 
     watch: {
@@ -77,7 +82,7 @@ module.exports = function(grunt) {
       prodServer: {
         command: [
           'git add .',
-          'git commit -m "Jack Is a Boss"',
+          'git commit -m "auto update"',
           // 'git push origin master',
           'git push azure master'
         ].join('&&')
@@ -120,7 +125,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'concat',
     'jshint',
-    // 'test',
+    'test',
     'uglify'
   ]);
 
