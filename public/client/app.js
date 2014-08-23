@@ -9,7 +9,7 @@ window.Shortly = Backbone.View.extend({
   initialize: function(){
     console.log( 'Shortly is running' );
     $('body').append(this.render().el);
-
+    console.log("tmd.THIS SHOUDL CHANGE IN BUILT is running");
     this.router = new Shortly.Router({ el: this.$el.find('#container') });
     this.router.on('route', this.updateNav, this);
 
