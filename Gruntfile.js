@@ -126,6 +126,7 @@ module.exports = function(grunt) {
     'concat',
     'jshint',
     'test',
+    'cssmin',
     'uglify'
   ]);
 
