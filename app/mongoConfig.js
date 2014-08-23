@@ -23,12 +23,12 @@ db.once('open', function callback () {
     date: { type: Date, default: Date.now }
   });
 
-  var User = mongoose.model('User', userSchema);
-  var Url = mongoose.model('Url', urlSchema);
+  exports.User = mongoose.model('User', userSchema);
+  exports.Url = mongoose.model('Url', urlSchema);
 
 });
 
-module.exports = db;
+
 
 
 
